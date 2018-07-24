@@ -399,9 +399,7 @@ namespace Autofac.Extras.MvvmCross
         /// </exception>
         public virtual object IoCConstruct(Type type, object arguments)
         {
-            throw new NotImplementedException();
-
-            // TODO: Implement a object-to-dictionary converter like RouteValuesDictionary in ASP.NET Core.
+            return this.IoCConstruct(type, arguments.ToPropertyDictionary());
         }
 
         /// <summary>
